@@ -11,7 +11,7 @@
       <div id="results-container" *ngIf="formModel.testableTextbox || hasBeenSubmitted">
         <div><strong>The text you wrote in the textarea:</strong></div>
         <div data-cy="displayed-text">{{ formModel.testableTextbox }}</div>
-        <button type="submit" [disabled]="!textboxForm.form.valid">Save</button>
+        <button data-cy="the-save-button" type="submit" [disabled]="!textboxForm.form.valid">Save</button>
       </div>
     </div>
   </form>
