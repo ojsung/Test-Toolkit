@@ -2,7 +2,6 @@
 <div class="row-flex">
   <div class="box-item">
   <form (ngSubmit)="save()" #textboxForm="ngForm">
-    <div> {{ formModel | json }} </div>
     <div id="parent-div" class="form-group">
       <div data-cy="textbox-container">
         <label for="the-textbox">A Writable Textbox</label>
@@ -11,7 +10,7 @@
       <div id="results-container" *ngIf="formModel.testableTextbox || hasBeenSubmitted">
         <div><strong>The text you wrote in the textarea:</strong></div>
         <div data-cy="displayed-text">{{ formModel.testableTextbox }}</div>
-        <button type="submit" [disabled]="!textboxForm.form.valid">Save</button>
+        <button data-cy="the-save-button" type="submit">Save</button>
       </div>
     </div>
   </form>
